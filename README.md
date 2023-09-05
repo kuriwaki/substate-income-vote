@@ -8,7 +8,7 @@ A short example showing the correlation between income and vote at the sub-state
 
 **State-Level Correlation**
 
-![](figures/states.png){width=50%}
+![ ](figures/states.png){width=50%}
 
 
 **County-Level Correlation**
