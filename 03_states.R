@@ -14,5 +14,4 @@ dat |>
   ) +
   theme(plot.margin = margin(0.2, 0.2, 0.2, 0.2, "in"))
 
-# 3 ----
 ggsave("figures/states.png", width = 5, height = 4.5)

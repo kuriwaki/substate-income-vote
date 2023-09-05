@@ -1,8 +1,6 @@
 library(tidyverse)
 library(scales)
 
-
-
 states_orig <- read_csv("data/counties.csv")
 
 # reorder

@@ -4,6 +4,7 @@ library(alarmdata)
 library(geomander)
 library(sf)
 
+#' Merge datasets
 county_df <- function(st) {
   
   # elections
@@ -16,6 +17,7 @@ county_df <- function(st) {
     state = st,
     geometry = TRUE,
     year = 2020)
+  
   # project up to county
   st_inc$pre_20_rep <- geo_estimate_up(from = st_map, to = st_inc, value = st_map$pre_20_rep_tru)
   st_inc$pre_20_dem <- geo_estimate_up(from = st_map, to = st_inc, value = st_map$pre_20_dem_bid)
@@ -32,10 +34,10 @@ county_df <- function(st) {
     st_drop_geometry()
 }
 
+# data
 al_df <- county_df("AL")
 pa_df <- county_df("PA")
 ct_df <- county_df("CT")
-
 
 states_df <- bind_rows(al_df, pa_df, ct_df) |> 
   as_tibble()
